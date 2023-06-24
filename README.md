@@ -46,7 +46,7 @@ A **course can have many tags**. E.g. A **course** like **`React`**, has **`many
    - Inside the `empty array`, add an object where the key called `type` is set to a mongoose `ObjectId` and the key `ref` references the `Tag` model.
 1. Create a relation between the `Tag` model and the `Course` model:
    - In `db/models/Tag.js` add a property called `courses`, assign it and `empty array`.
-   - Inside the `empty array`, add an object where the key called `type` is set to a mongoose `ObjectId` and the key `ref` references the `Tag` model.
+   - Inside the `empty array`, add an object where the key called `type` is set to a mongoose `ObjectId` and the key `ref` references the `Course` model.
 1. Create add a route and controller function that establishes a relation:
    - In the `api/courses` Add a route with `post` as the method and `/:courseId` as the url.
    - Create a controller called `addTagToCourse` in the `api/courses/courses.controllers.js` file and export it.
