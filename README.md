@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Create an `.env` file with the `MONGODB_URL` set the your database.
+1. Create a MONGODB_URL variable in the .env file.
 1. Install all requirements.
 1. Inspect the projects models and api directory.
 1. Read the task fully.
