@@ -1,4 +1,5 @@
 const Course = require("../../db/models/Course");
+const Tag = require("../../db/models/Tag");
 
 exports.fetchCourseById = async (courseId) => {
   const course = await Course.findById(courseId);
@@ -8,7 +9,10 @@ exports.fetchCourseById = async (courseId) => {
 exports.getAllCourses = async (req, res, next) => {
   try {
     // Populate here
-    const courses = await Course.find();
+    const courses = await Course.find().populate([
+      { path: "lectures", select: "id name" },
+      { path: "tags", select: "id name" },
+    ]);
     return res.status(200).json(courses);
   } catch (error) {
     return next(error);
@@ -51,4 +55,17 @@ exports.deleteCourseById = async (req, res, next) => {
 };
 
 // Add extra controllers here
-
+exports.addTagToCourse = async (req, res, next) => {
+  try {
+    console.log(req.course);
+    await Course.findByIdAndUpdate(req.course._id, {
+      $push: { tags: req.body.tag },
+    });
+    await Tag.findByIdAndUpdate(req.body.tag, {
+      $push: { courses: req.course._id },
+    });
+    res.status(204).end();
+  } catch (error) {
+    next(error);
+  }
+};

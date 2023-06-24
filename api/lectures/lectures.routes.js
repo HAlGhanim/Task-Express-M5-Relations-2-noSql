@@ -7,6 +7,7 @@ const {
   getLectureById,
   updateLectureById,
   deleteLectureById,
+  addToCourse,
 } = require("./lectures.controllers");
 
 router.param("lectureId", async (req, res, next, lectureId) => {
@@ -26,6 +27,6 @@ router.post("/", createLecture);
 router.get("/:lectureId", getLectureById);
 router.put("/:lectureId", updateLectureById);
 router.delete("/:lectureId", deleteLectureById);
-// Add routes to create relations here
+router.post("/:lectureId", addToCourse)
 
 module.exports = router;

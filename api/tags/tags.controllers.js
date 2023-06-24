@@ -8,7 +8,10 @@ exports.fetchTagById = async (tagId) => {
 exports.getAllTags = async (req, res, next) => {
   try {
     // Populate here
-    const tags = await Tag.find();
+    const tags = await Tag.find().populate({
+      path: "courses",
+      select: "name -_id",
+    });
     return res.status(200).json(tags);
   } catch (error) {
     return next(error);
