@@ -30,7 +30,7 @@ A **course has many lectures**. E.g. A **course** like **`React`**, has **`many 
    - Inside the `addToCourse` function, use the `Course` model and the `findByIdAndUpdate` query to find the course using the id in the request body, then push the lecture id to the the courses list of the tag.
    - return an empty response with the status set to 204.
 1. Test your endpoint in postman:
-   - Setup a request to use the endpoint you created earlier, and send `JSON` with the key of `course` set to a value of a `course` that exists.
+   - Setup a request to use the endpoints you created earlier, and send `JSON` with the key of `course` set to a value of an id of a `course` that exists.
 1. Lets populate the list of courses and the list of lectures.
    - In `lectures.controllers.js`, update the find method with populate to retrieve details on the course property. Test it in Postman using both adding a course to an existing lecture.
    - In the `courses.controllers.js`, update the find method with populate to retrieve details on the lectures property.
@@ -54,6 +54,8 @@ A **course can have many tags**. E.g. A **course** like **`React`**, has **`many
    - Import the `Tag` model into the `courses.controllers.js`.
    - Inside the `addTagToCourse` function, use the `Tag` model and the `findByIdAndUpdate` query to find the tag using the id in the request body, then push the course id of the course to the the courses list of the tag.
    - return an empty response with the status set to 204.
+1. Test your endpoints in postman:
+   - Setup a request to use the endpoint you created earlier, and send `JSON` with the key of `tag` set to a value of an id of a `tag` that exists.
 1. Lets populate the list of courses and the list of tags.
    - In `tags.controllers.js`, update the find method with populate to retrieve details on the courses property.
    - In the `courses.controllers.js`, update the find method by chaining an extra populate to retrieve details on the tags property.
