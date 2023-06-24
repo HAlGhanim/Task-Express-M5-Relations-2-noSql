@@ -1,0 +1,413 @@
+{
+  "info": {
+    "_postman_id": "18f0e4c2-85e7-4286-bbc4-a16a6381ea09",
+    "name": "Relations Course Task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "13380578"
+  },
+  "item": [
+    {
+      "name": "Tags",
+      "item": [
+        {
+          "name": "Get all Tags",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/tags",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "tags"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tag By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/tags/:tagId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "tags", ":tagId"],
+              "variable": [
+                {
+                  "key": "tagId",
+                  "value": "6495e6584528a3454d2bb3df"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Tag By ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/tags/:tagId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "tags", ":tagId"],
+              "variable": [
+                {
+                  "key": "tagId",
+                  "value": "6495ea33001cc476749909cd"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Tag By ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Express Node\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/tags/:tagId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "tags", ":tagId"],
+              "variable": [
+                {
+                  "key": "tagId",
+                  "value": "6495ea33001cc476749909cd"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New Tag",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"JS\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/tags",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "tags"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Courses",
+      "item": [
+        {
+          "name": "Get all Courses",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/courses",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "courses"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Course By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/courses/:courseId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "courses", ":courseId"],
+              "variable": [
+                {
+                  "key": "courseId",
+                  "value": "6495ea4c001cc476749909d0"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Course By ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/courses/:courseId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "courses", ":courseId"],
+              "variable": [
+                {
+                  "key": "courseId",
+                  "value": "6496203ea0d08b02b648b7bb"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Course By ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"React Navtive\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/courses/:courseId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "courses", ":courseId"],
+              "variable": [
+                {
+                  "key": "courseId",
+                  "value": "6495ea4c001cc476749909d0"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New Course",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Django\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/courses",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "courses"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add tags to Course",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tag\": \"64961e7fa0d08b02b648b7a9\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/courses/:courseId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "courses", ":courseId"],
+              "variable": [
+                {
+                  "key": "courseId",
+                  "value": "6496206ca0d08b02b648b7c4"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Lectures",
+      "item": [
+        {
+          "name": "Get all Lectures",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/lectures",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "lectures"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get lecture By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/lectures/:lectureId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "lectures", ":lectureId"],
+              "variable": [
+                {
+                  "key": "lectureId",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Lecture By ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8000/api/lectures/:lectureId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "lectures", ":lectureId"],
+              "variable": [
+                {
+                  "key": "lectureId",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Lecture By ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"React Navtive\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/lectures/:lectureId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "lectures", ":lectureId"],
+              "variable": [
+                {
+                  "key": "lectureId",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Lecture to Course",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"course\": \"6496206ca0d08b02b648b7c4\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/lectures/:lectureId",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "lectures", ":lectureId"],
+              "variable": [
+                {
+                  "key": "lectureId",
+                  "value": "6496251ac10f1e4a9a4207ca"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New Lecture",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Mongoose\",\n    \"course\": \"6496206ca0d08b02b648b7c4\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8000/api/lectures",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "lectures"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
