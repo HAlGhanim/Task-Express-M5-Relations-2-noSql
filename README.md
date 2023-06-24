@@ -12,7 +12,7 @@
 
 ### One-to-Many Relation
 
-A course has many lectures. E.g. A **course** like **`React`**, has **`many lectures`** dedicated for many topics, like `useState`, `react-query`, `react-router-dom`. So we will try to create this type relationship by doing the following:
+A **course has many lectures**. E.g. A **course** like **`React`**, has **`many lectures`** dedicated for many topics, like `useState`, `react-query`, `react-router-dom`. So we will try to create this type relationship by doing the following:
 
 1. Setup
    - Create a course and a lecture using postman.
@@ -37,7 +37,7 @@ A course has many lectures. E.g. A **course** like **`React`**, has **`many lect
 
 ### Many-to-Many Relation
 
-A course can have many tag. E.g. A **course** like **`React`**, has **`many tags`** such as `frontend`, `javascript`, `library`. And a tag can have many courses, e.g. a tag of `frontend` can have `css`,  `html`, `javascript`, `react` as associated courses.So we will try to create this type relationship by doing the following:
+A **course can have many tags**. E.g. A **course** like **`React`**, has **`many tags`** such as `frontend`, `javascript`, `library`. And a **tag can have many courses**, e.g. a tag of `frontend` can have `css`,  `html`, `javascript`, `react` as associated courses.So we will try to create this type relationship by doing the following:
 
 1. Setup
    - Create a course and a tag using postman.
